@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Block Fill</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <h1>Block Fill</h1>
+    <h3>Instrucciones:</h3>
+    <p>
+      ¡Dibuja una línea desde el cuadrado inicial que llene todos los cuadrados
+      del tablero para completar cada nivel!
+    </p>
+    <ul>
+      <li>Comienza arrastrando desde el cuadrado rojo inicial.</li>
+      <li>
+        Llena todos los cuadrados grises (rellenables) arrastrando el mouse.
+      </li>
+      <li>
+        No puedes pasar por un cuadrado que ya hayas rellenado (pierdes
+        instantáneamente).
+      </li>
+      <li>
+        No puedes tocar celdas no rellenables (cuadrados oscuros; pierdes
+        instantáneamente).
+      </li>
+      <li>
+        El nivel termina automáticamente al ganar (llenar todo) o perder
+        (error).
+      </li>
+      <li>
+        Ganas 1 punto por nivel completado; pierdes todos los puntos si fallas.
+      </li>
+    </ul>
+    <div id="game-container">
+      <div id="game-board"></div>
+      <div id="sidebar">
+        <p>Score: <span id="score">0</span></p>
+        <div id="ranking-container"></div>
+      </div>
+    </div>
+    <div id="message-container" class="hidden">
+      <p id="message-text"></p>
+    </div>
+    <br />
+    <button onclick="localStorage.clear(); location.reload()">
+      🧹 Reset Total
+    </button>
+    <script src="script.js"></script>
+  </body>
+</html>
